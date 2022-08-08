@@ -29,13 +29,14 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/assets/Montserrat.css",
-              "src/assets/Mulish.css",
-              "src/assets/styles.css",
+              "src/assets/css/Montserrat.css",
+              "src/assets/css/Mulish.css",              
+              "src/assets/fonts/fontawesome-all.min.css",
+              "src/assets/css/styles.css",
               "src/styles.scss"
             ],
             "scripts": [
-                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]            
           },
           "configurations": {

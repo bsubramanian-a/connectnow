@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
-import { WithoutsidebarComponent } from './layouts/withoutsidebar/withoutsidebar.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { VideogamesComponent } from './modules/videogames/videogames.component';
 
@@ -11,12 +10,8 @@ const routes: Routes = [{
   children:[{
     path:'',
     component:VideogamesComponent
-  }]
-},{
-  path:'contact',
-  component: WithoutsidebarComponent ,
-  children:[{
-    path:'',
+  },{
+    path:'contact',
     component:ContactComponent
   }]
 }];

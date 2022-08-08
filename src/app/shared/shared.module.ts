@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { GameComponent } from './components/game/game.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent,
-    SidebarComponent
+    GameComponent
   ],
   imports: [
     CommonModule,
@@ -18,8 +16,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     HeaderComponent,
-    FooterComponent,
-    SidebarComponent
+    GameComponent
   ]
 })
 export class SharedModule { }

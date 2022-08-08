@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
-import { WithoutsidebarModule } from './layouts/withoutsidebar/withoutsidebar.module';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { WithoutsidebarModule } from './layouts/withoutsidebar/withoutsidebar.mo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DefaultModule,
-    WithoutsidebarModule
+    DefaultModule
   ],
   providers: [],
   bootstrap: [AppComponent]
