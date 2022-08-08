@@ -4,6 +4,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { VideogamesComponent } from './modules/videogames/videogames.component';
 
+
 const routes: Routes = [{
   path:'',
   component: DefaultComponent,

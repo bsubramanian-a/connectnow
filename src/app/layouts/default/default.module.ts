@@ -4,16 +4,19 @@ import { DefaultComponent } from './default.component';
 import { VideogamesComponent } from 'src/app/modules/videogames/videogames.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
-    VideogamesComponent
+    VideogamesComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     SharedModule
   ]
 })

@@ -5,3 +5,61 @@
   font-weight: 400;
   text-decoration: none;
 }
+
+.rating {
+  background-color: #5692e8;
+  width: 26px;
+  height: 26px;
+  top: 6%;
+  right: 5%;
+}
+
+.rating-text {
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.game-title {
+  padding: 12px 30px;
+}
+
+.game-name {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.game-release-date {
+  color: #c1d1e8 !important;
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+.game-summary {
+  color: #c1d1e8 !important;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+.game-rating {
+  background-color: #5692e8;
+  width: 42px;
+  height: 42px;
+}
+
+.game-rating-inner {
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.game-card {
+  background-color: #0e1a2b;
+  border: 0px;
+}
