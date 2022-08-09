@@ -3,7 +3,7 @@
     font-weight: 500;
     position: absolute;
     top: -50px;
-    left: -14px;
+    left: 14px;
     z-index: 0;
     font-family: Montserrat, sans-serif;
     color: #1b2941;
@@ -12,3 +12,11 @@
 .cursor-pointer {
     cursor: pointer;
 }
+
+@media (max-width: 992px) {
+    .highlited_text {
+        font-size: 68px;
+    }
+}
+
+
