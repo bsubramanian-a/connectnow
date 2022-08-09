@@ -1,9 +1,40 @@
 @media (min-width: 992px) {
-    .width_class {
-      width: 50%;
-    }
+  .width_class {
+    width: 50%;
+  }
 }
 
 .page-title {
-  color: #c1d1e8;font-size: 30px;font-weight: 500;
+  color: #c1d1e8;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.page-desc {
+  color: #c1d1e899 !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.field-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.required {
+  color: #5692e8;
+}
+
+.send-button {
+  background-color: #5692e8;
+  border: none !important;
+  padding: 8px 30px;
+  border-radius: 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
 }

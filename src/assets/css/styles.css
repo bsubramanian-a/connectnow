@@ -65,4 +65,8 @@ html, body {
   border: 0px;
 }
 
+.input-text {
+  background-color: #182c47;border: none !important;padding: 14px 30px;color: #fff;border-radius: 0px;
+}
+
 
