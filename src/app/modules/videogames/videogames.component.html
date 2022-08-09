@@ -8,24 +8,24 @@
                         <h1 class="mb-3" style="font-size: 20px;color: rgb(255,255,255);font-weight: 500;font-family: Montserrat, sans-serif;">Name (contains)</h1><input [(ngModel)]="searchName" (input)="search()" type="text" class="w-100" style="background-color: #182c47;border: none !important;padding: 14px 30px;color: #fff;">
                     </div>
                     <div class="col col-12 col-md-4 col-lg-12">
-                        <h1 class="mb-3" style="font-size: 20px;color: rgb(255,255,255);font-weight: 500;font-family: Montserrat, sans-serif;">Minimum Score</h1><input type="text" class="w-100" style="background-color: #182c47;border: none !important;padding: 14px 30px;color: #fff;" placeholder="1 - 10">
+                        <h1 class="mb-3" style="font-size: 20px;color: rgb(255,255,255);font-weight: 500;font-family: Montserrat, sans-serif;">Minimum Score</h1><input type="text" class="w-100" style="background-color: #182c47;border: none !important;padding: 14px 30px;color: #fff;" placeholder="1 - 10" [(ngModel)]="searchScore" (input)="search()">
                     </div>
                     <div class="col col-12 col-md-5 col-lg-12">
-                        <h1 class="mb-3" style="font-size: 20px;color: rgb(255,255,255);font-weight: 500;font-family: Montserrat, sans-serif;">Minimum Score</h1>
+                        <h1 class="mb-3" style="font-size: 20px;color: rgb(255,255,255);font-weight: 500;font-family: Montserrat, sans-serif;">Order By</h1>
                         <div class="d-flex">
                             <div class="d-flex align-items-center p-3" style="background-color: #5692e8;border: none !important;padding: 14px;color: #fff;"><i class="fas fa-arrow-up text-white" style="font-size: 20px;"></i></div>
-                            <div class="dropdown w-100"><button class="btn btn-primary dropdown-toggle w-100 d-flex justify-content-between align-items-center" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background-color: #182c47;border: none !important;padding: 15px 30px;color: #fff;border-radius: 0px;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;">Release Date</button>
-                                <div class="dropdown-menu w-100" style="background-color: #182c47;border: none !important;padding: 12px 16px;border-radius: 0px;"><a class="dropdown-item mb-3" href="#" style="background-color: #182c47;border: none !important;color: #fff;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;">Score</a><a class="dropdown-item" href="#" style="background-color: #182c47;border: none !important;color: #fff;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;">Name</a></div>
+                            <div class="dropdown w-100"><button class="btn btn-primary dropdown-toggle w-100 d-flex justify-content-between align-items-center" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background-color: #182c47;border: none !important;padding: 15px 30px;color: #fff;border-radius: 0px;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;">{{sortOption}}</button>
+                                <div class="dropdown-menu w-100" style="background-color: #182c47;border: none !important;padding: 12px 16px;border-radius: 0px;"><a class="dropdown-item mb-3" href="#" style="background-color: #182c47;border: none !important;color: #fff;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;" (click)="dropdownClick('Score')">Score</a><a class="dropdown-item mb-3" href="#" style="background-color: #182c47;border: none !important;color: #fff;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;" (click)="dropdownClick('Name')">Name</a><a class="dropdown-item" href="#" style="background-color: #182c47;border: none !important;color: #fff;font-family: Montserrat, sans-serif;font-size: 18px;font-weight: 500;" (click)="dropdownClick('Release Date')">Release Date</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-12 col-md-3 col-lg-12 d-flex justify-content-end align-items-end"><button class="btn btn-primary" type="button" style="background-color: #5692e8;border: none !important;padding: 15px 30px;color: #fff;border-radius: 0px;font-size: 18px;font-family: Montserrat, sans-serif;font-weight: 600;">Clear</button></div>
+                    <div class="col col-12 col-md-3 col-lg-12 d-flex justify-content-end align-items-end" ><button class="btn btn-primary" type="button" style="background-color: #5692e8;border: none !important;padding: 15px 30px;color: #fff;border-radius: 0px;font-size: 18px;font-family: Montserrat, sans-serif;font-weight: 600;" (click)=clearFilter()>Clear</button></div>
                 </div>
             </div>
         </div>
     </div>
     <div class="col col-xl-8 col-12">
-        <div *ngIf="filteredGames?.length == 0">No results found</div>
+        <div class="text-white" *ngIf="filteredGames?.length == 0">No results found</div>
         <ng-template ngFor let-game [ngForOf]="filteredGames">
             <app-game [game]="game"></app-game>
         </ng-template>

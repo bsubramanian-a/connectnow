@@ -1,15 +1,15 @@
 <div class="card mb-3 game-card">
     <div class="row">
-        <div class="col col-sm-12 col-md-2 position-relative"><img class="w-100" src="assets/img/image.png" width="142" height="142">
-            <div class="d-flex d-print-none d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none justify-content-center align-items-center justify-content-sm-center align-items-sm-center rounded-circle position-absolute rating"><span class="rating-text">9</span></div>
+        <div class="col col-sm-12 col-md-2 position-relative"><img class="w-100 h-100" src="assets/img/image.png">
+            <div class="d-flex d-print-none d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none justify-content-center align-items-center justify-content-sm-center align-items-sm-center rounded-circle position-absolute rating"><span class="rating-text">{{ game?.rating | number:'1.0-1' }}</span></div>
         </div>
-        <div class="col col-12 col-md-9 game-title">
+        <div class="col col-12 col-md-8 game-title pe-0">
             <h4 class="game-name">{{ game?.name }}</h4>
-            <h6 class="text-muted mb-2 game-release-date">Release Date : {{ game?.first_release_date | date: 'dd/mm/yyyy' }}</h6>
+            <h6 class="text-muted mb-2 game-release-date">Release Date : {{ game?.first_release_date | date: 'd/M/y' }}</h6>
             <p class="mb-0 game-summary">{{ game?.summary }}</p>
         </div>
-        <div class="col d-none d-print-block d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block col-1 align-self-center d-flex p-0">
-            <div class="d-flex align-items-center justify-content-center rounded-circle game-rating"><span class="game-rating-inner">{{ game?.rating | number:'1.0-1' }}</span></div>
+        <div class="col col-md-2 d-none d-print-block d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block col-1 align-self-center d-flex">
+            <div class="d-flex align-items-center justify-content-center rounded-circle game-rating ms-auto me-3"><span class="game-rating-inner">{{ game?.rating | number:'1.0-1' }}</span></div>
         </div>
     </div>
 </div>

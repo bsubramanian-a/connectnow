@@ -4,12 +4,14 @@
   color: #fff;
   font-weight: 400;
   text-decoration: none;
+  z-index: 10;
+  position: absolute;
 }
 
 .rating {
   background-color: #5692e8;
-  width: 26px;
-  height: 26px;
+  width: 45px;
+  height: 45px;
   top: 6%;
   right: 5%;
 }
@@ -48,8 +50,8 @@
 
 .game-rating {
   background-color: #5692e8;
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
 }
 
 .game-rating-inner {
@@ -62,4 +64,8 @@
 .game-card {
   background-color: #0e1a2b;
   border: 0px;
+}
+
+html, body {
+  min-height: 100%;
 }

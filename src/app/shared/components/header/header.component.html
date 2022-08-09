@@ -1,10 +1,12 @@
 <div class="row mb-5 mt-5">
-  <div class="col col-12 col-xl-4">
-    <a href="" class="title"><strong>VIDEO GAMES</strong><br /></a>
+  <div class="col col-12 col-xl-6 position-relative cursor-pointer">
+    <span class="title" (click)="redirectTo('')"><strong>VIDEO GAMES</strong><br /></span>
+    <span *ngIf="temp" class="highlited_text">VIDEO</span>
   </div>
-  <div class="col col-12 col-xl-8">
-    <a href="/contact" class="title"
-      ><strong><span>CONTACT</span></strong></a
+  <div class="col col-12 col-xl-6 position-relative cursor-pointer">
+    <span class="title" (click)="redirectTo('contact')"
+      ><strong><span>CONTACT</span></strong></span
     >
+    <span *ngIf="!temp" class="highlited_text">CONTACT</span>
   </div>
 </div>
