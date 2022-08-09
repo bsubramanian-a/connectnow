@@ -1,5 +1,9 @@
-.title {
+html, body {
+  min-height: 100%;
   font-family: Montserrat, sans-serif;
+}
+
+.title {
   font-size: 42px;
   color: #fff;
   font-weight: 400;
@@ -18,7 +22,6 @@
 
 .rating-text {
   font-size: 18px;
-  font-family: Montserrat, sans-serif;
   font-weight: 600;
   color: #fff;
 }
@@ -29,7 +32,6 @@
 
 .game-name {
   color: #fff;
-  font-family: Montserrat, sans-serif;
   font-size: 24px;
   font-weight: 600;
 }
@@ -37,14 +39,12 @@
 .game-release-date {
   color: #c1d1e8 !important;
   font-size: 18px;
-  font-family: Montserrat, sans-serif;
   font-weight: 500;
 }
 
 .game-summary {
   color: #c1d1e8 !important;
   font-size: 15px;
-  font-family: Montserrat, sans-serif;
   font-weight: 500;
 }
 
@@ -56,7 +56,6 @@
 
 .game-rating-inner {
   font-size: 20px;
-  font-family: Montserrat, sans-serif;
   font-weight: 600;
   color: #fff;
 }
@@ -66,6 +65,4 @@
   border: 0px;
 }
 
-html, body {
-  min-height: 100%;
-}
+

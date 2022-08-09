@@ -38,12 +38,12 @@ export class VideogamesComponent implements OnInit {
       this.filteredGames = this.filteredGames?.filter(game => game.name.toLocaleLowerCase().match(searchValue))
     }
     if(this.searchScore){
-      this.filteredGames = this.filteredGames?.filter(game => parseFloat(game.rating.toFixed(1)) ===  parseFloat(this.searchScore))
+      this.filteredGames = this.filteredGames?.filter(game => parseFloat(game.rating.toFixed(1)) >=  parseFloat(this.searchScore))
     }
 
     this.filteredGames = this.filteredGames?.sort((a,b) => {
       if(this.sortOption == 'Score'){
-        return (a.rating > b.rating) ? -1 : ((b.rating > a.rating) ? 1 : 0)
+        return (a.rating > b.rating) ? 1 : ((b.rating > a.rating) ? -1 : 0)
       }
       if(this.sortOption == 'Release Date'){
         return b.first_release_date - a.first_release_date;
